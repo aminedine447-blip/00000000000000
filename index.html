@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>دفتر الدراسة | السنة الثانية ثانوي</title>
+<style>
+:root{--bg:#f5f6fa;--panel:#fff;--ink:#202638;--muted:#737b8f;--line:#e7eaf1;--accent:#6b63d9;--accent2:#8d86f2;--soft:#efeeff;--green:#25866d;--orange:#c57a27;--red:#c84f62;--shadow:0 12px 35px #28304a0b}
+*{box-sizing:border-box}body{margin:0;font-family:Tahoma,Arial,sans-serif;background:var(--bg);color:var(--ink)}button,input,select,textarea{font:inherit}button{cursor:pointer;border:0}.layout{display:grid;grid-template-columns:245px 1fr;min-height:100vh}.sidebar{background:#22243a;color:#fff;padding:25px 17px;position:sticky;top:0;height:100vh}.brand{display:flex;align-items:center;gap:11px;padding:0 8px 28px}.logo{width:43px;height:43px;border-radius:14px;background:linear-gradient(135deg,#8b84ff,#6259d3);display:grid;place-items:center;font-size:22px}.brand h1{font-size:17px;margin:0 0 5px}.brand small{color:#b6bad0;font-size:11px}.nav-label{font-size:11px;color:#9ea3bf;margin:8px 10px 12px}.nav{display:grid;gap:7px}.nav button{background:transparent;color:#c7c9da;text-align:right;padding:13px 14px;border-radius:11px;display:flex;align-items:center;gap:12px}.nav button.active,.nav button:hover{background:#393a57;color:white}.nav .ico{width:22px;text-align:center;font-size:17px}.side-note{position:absolute;bottom:22px;right:17px;left:17px;background:#30324d;padding:15px;border-radius:14px;color:#c9cbe0;font-size:12px;line-height:1.8}.side-note strong{display:block;color:#fff;margin-bottom:4px}.main{padding:28px clamp(16px,3vw,42px);max-width:1500px;width:100%;margin:auto}.topbar{display:flex;justify-content:space-between;align-items:center;gap:15px;margin-bottom:28px}.eyebrow{font-size:12px;color:var(--accent);font-weight:bold;margin-bottom:8px}.topbar h2{margin:0;font-size:clamp(23px,3vw,30px)}.topbar p{color:var(--muted);font-size:13px;margin:9px 0 0}.date-chip{background:white;border:1px solid var(--line);border-radius:12px;padding:12px 15px;font-size:12px;color:var(--muted);white-space:nowrap}.page{display:none}.page.active{display:block}.welcome{background:linear-gradient(115deg,#6961d7,#8b83ee);border-radius:19px;padding:25px 28px;color:white;display:flex;align-items:center;justify-content:space-between;gap:20px;box-shadow:var(--shadow);margin-bottom:22px}.welcome h3{font-size:22px;margin:0 0 10px}.welcome p{margin:0;color:#efeeff;font-size:13px;line-height:1.9}.welcome-mark{font-size:56px;opacity:.9}.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-bottom:23px}.stat,.panel,.section-card{background:var(--panel);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow)}.stat{padding:18px}.stat-top{display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:12px}.stat-icon{width:34px;height:34px;display:grid;place-items:center;background:var(--soft);border-radius:11px;font-size:17px}.stat strong{display:block;font-size:28px;margin-top:14px}.stat small{color:var(--muted);font-size:11px}.content-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:18px}.panel{padding:21px;margin-bottom:18px}.panel-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:18px}.panel-head h3{margin:0;font-size:16px}.panel-head span{font-size:11px;color:var(--muted)}.quick-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.quick{border:1px solid var(--line);border-radius:13px;padding:15px;text-align:right;background:white;color:var(--ink);display:flex;align-items:center;gap:12px}.quick:hover{border-color:var(--accent2);background:#fafaff}.quick-icon{width:39px;height:39px;border-radius:12px;background:var(--soft);display:grid;place-items:center;font-size:19px}.quick b{display:block;font-size:13px;margin-bottom:5px}.quick small{color:var(--muted);font-size:11px}.empty{padding:25px 12px;text-align:center;color:var(--muted);font-size:13px;line-height:1.9}.empty span{font-size:28px;display:block;margin-bottom:8px}.item-list{display:grid;gap:10px}.item{display:flex;justify-content:space-between;gap:12px;align-items:flex-start;border:1px solid var(--line);padding:13px;border-radius:12px}.item h4{margin:0 0 7px;font-size:13px}.item p{margin:0;color:var(--muted);font-size:11px;line-height:1.7}.pill{display:inline-block;border-radius:20px;padding:5px 9px;font-size:10px;background:var(--soft);color:var(--accent);white-space:nowrap}.pill.done{background:#e5f7ef;color:var(--green)}.pill.soon{background:#fff3df;color:var(--orange)}.delete{background:#fff0f2;color:var(--red);border-radius:8px;padding:7px 9px;font-size:11px}.page-intro{margin-bottom:20px}.page-intro h3{font-size:21px;margin:0 0 8px}.page-intro p{color:var(--muted);font-size:13px;margin:0;line-height:1.8}.toolbar{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:15px;flex-wrap:wrap}.primary{background:var(--accent);color:white;padding:11px 16px;border-radius:10px;font-size:12px;font-weight:bold}.primary:hover{background:#5951c6}.secondary{background:#f0efff;color:var(--accent);padding:10px 14px;border-radius:10px;font-size:12px}.form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.field{display:grid;gap:7px}.field.full{grid-column:1/-1}.field label{font-size:12px;color:#555d71}.field input,.field select,.field textarea,.search{width:100%;border:1px solid #dfe3ed;border-radius:10px;background:white;padding:11px 12px;outline:none;color:var(--ink);font-size:12px}.field input:focus,.field select:focus,.field textarea:focus,.search:focus{border-color:var(--accent2);box-shadow:0 0 0 3px #8b83ee20}.field textarea{min-height:110px;resize:vertical;line-height:1.8}.form-actions{display:flex;gap:9px;margin-top:15px;flex-wrap:wrap}.hidden{display:none!important}.notes-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}.note-card{background:white;border:1px solid var(--line);border-radius:14px;padding:16px;box-shadow:var(--shadow);border-top:4px solid var(--accent2)}.note-card h4{font-size:14px;margin:0 0 8px}.note-card p{font-size:12px;line-height:1.9;color:#5d6478;white-space:pre-wrap;overflow-wrap:anywhere}.note-meta{font-size:10px;color:var(--muted);margin-bottom:12px}.note-card .delete{margin-top:8px}.table-wrap{overflow:auto;border:1px solid var(--line);border-radius:13px;background:white}.timetable{border-collapse:collapse;width:100%;min-width:650px;text-align:center;font-size:12px}.timetable th{background:#f0efff;color:#4e48a8;padding:14px 9px}.timetable td{padding:8px;border-top:1px solid var(--line);border-left:1px solid var(--line);min-width:95px}.timetable td input{width:100%;min-width:70px;border:1px solid transparent;background:#fafaff;border-radius:7px;padding:9px 5px;text-align:center;font-size:11px;color:var(--ink)}.timetable td input:focus{outline:1px solid var(--accent2)}.timetable .time{background:#fafbfe;color:var(--muted);font-size:11px}.hint{font-size:11px;color:var(--muted);line-height:1.8;margin-top:12px}.filter-row{display:flex;gap:9px;flex-wrap:wrap}.filter-row select{border:1px solid var(--line);border-radius:9px;padding:9px 12px;background:white;font-size:12px;color:var(--ink)}.toast{position:fixed;bottom:20px;left:20px;background:#24263b;color:white;padding:12px 18px;border-radius:10px;font-size:12px;box-shadow:var(--shadow);opacity:0;transform:translateY(10px);transition:.2s;pointer-events:none}.toast.show{opacity:1;transform:translateY(0)}.footer{text-align:center;color:#9a9fb0;font-size:10px;padding:16px 0 5px}
+@media(max-width:1050px){.stats{grid-template-columns:repeat(2,1fr)}.notes-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.content-grid{grid-template-columns:1fr}.sidebar{width:210px}.layout{grid-template-columns:210px 1fr}}
+@media(max-width:720px){.layout{display:block}.sidebar{position:sticky;z-index:5;top:0;height:auto;padding:10px 12px;width:100%}.brand{padding:0 4px 10px}.brand .logo{width:34px;height:34px}.brand h1{font-size:14px}.nav-label,.side-note{display:none}.nav{display:flex;overflow-x:auto;gap:5px;padding-bottom:2px}.nav button{flex:0 0 auto;padding:9px 11px;font-size:11px}.nav .ico{font-size:14px}.main{padding:20px 13px}.topbar{align-items:flex-start}.date-chip{display:none}.welcome{padding:20px}.welcome-mark{font-size:38px}.welcome h3{font-size:18px}.stats{gap:9px}.stat{padding:13px}.stat strong{font-size:24px}.panel{padding:15px}.notes-grid{grid-template-columns:1fr}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.quick-grid{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<div class="layout">
+<aside class="sidebar">
+  <div class="brand"><div class="logo">a</div><div><h1>دفتر الدراسة</h1><small>السنة الثانية ثانوي</small></div></div>
+  <div class="nav-label">القائمة الرئيسية</div>
+  <nav class="nav" id="navigation">
+    <button class="active" data-page="home"><span class="ico">⌂</span>الرئيسية</button>
+    <button data-page="notes"><span class="ico">▤</span>الملاحظات</button>
+    <button data-page="tasks"><span class="ico">✓</span>الفروض والاختبارات</button>
+    <button data-page="revision"><span class="ico">◷</span>المراجعات</button>
+    <button data-page="schedule"><span class="ico">▦</span>جدول التوقيت</button>
+  </nav>
+  <div class="side-note"><strong>💡 تذكير صغير</strong>خطوة صغيرة كل يوم تصنع فرقًا كبيرًا. نظّم وقتك وراجع باستمرار.</div>
+</aside>
+<main class="main">
+<header class="topbar"><div><div class="eyebrow">مساحتك لتنظيم الدراسة</div><h2 id="pageTitle">مرحبًا بك 👋</h2><p id="pageSubtitle">كل ما تحتاجه لدراستك في مكان واحد.</p></div><div class="date-chip" id="today"></div></header>
+
+<section class="page active" id="home">
+  <div class="welcome"><div><h3>ابدأ يومك بخطة واضحة ✨</h3><p>رتّب ملاحظاتك، سجّل مواعيد الفروض،<br>وتابع مراجعاتك وجدولك الدراسي بسهولة.</p></div><div class="welcome-mark">📚</div></div>
+  <div class="stats">
+    <div class="stat"><div class="stat-top"><span>الملاحظات</span><span class="stat-icon">📝</span></div><strong id="countNotes">0</strong><small>ملاحظة محفوظة</small></div>
+    <div class="stat"><div class="stat-top"><span>الفروض والاختبارات</span><span class="stat-icon">📋</span></div><strong id="countTasks">0</strong><small>موعد مسجّل</small></div>
+    <div class="stat"><div class="stat-top"><span>المراجعات</span><span class="stat-icon">📖</span></div><strong id="countRevision">0</strong><small>حصة مراجعة</small></div>
+    <div class="stat"><div class="stat-top"><span>المهام المكتملة</span><span class="stat-icon">🎯</span></div><strong id="countDone">0</strong><small>فرض أو مراجعة مكتملة</small></div>
+  </div>
+  <div class="content-grid">
+    <div>
+      <div class="panel"><div class="panel-head"><h3>الوصول السريع</h3><span>اختصر الطريق</span></div><div class="quick-grid">
+        <button class="quick" data-go="notes"><span class="quick-icon">📝</span><span><b>أضف ملاحظة</b><small>اكتب فكرة أو ملخصًا</small></span></button>
+        <button class="quick" data-go="tasks"><span class="quick-icon">📋</span><span><b>سجّل فرضًا</b><small>لا تنسَ موعدًا مهمًا</small></span></button>
+        <button class="quick" data-go="revision"><span class="quick-icon">📚</span><span><b>خطط للمراجعة</b><small>نظّم جلساتك</small></span></button>
+        <button class="quick" data-go="schedule"><span class="quick-icon">🗓️</span><span><b>جدول التوقيت</b><small>عدّل حصصك بسهولة</small></span></button>
+      </div></div>
+      <div class="panel"><div class="panel-head"><h3>أقرب الفروض والاختبارات</h3><button class="secondary" data-go="tasks">عرض الكل</button></div><div id="upcomingTasks" class="item-list"></div></div>
+    </div>
+    <div>
+      <div class="panel"><div class="panel-head"><h3>مراجعاتك القادمة</h3><button class="secondary" data-go="revision">عرض الكل</button></div><div id="upcomingRevision" class="item-list"></div></div>
+      <div class="panel"><div class="panel-head"><h3>تذكير اليوم</h3></div><p style="font-size:12px;color:var(--muted);line-height:2">قسّم الدرس إلى أجزاء صغيرة، وخذ استراحة قصيرة بين الحصص. لا تؤجل المراجعة إلى الليلة السابقة للاختبار.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="page" id="notes">
+ <div class="page-intro"><h3>📝 الملاحظات</h3><p>احفظ ملخصات الدروس، القواعد، الأفكار والأسئلة التي تريد الرجوع إليها.</p></div>
+ <div class="panel"><div class="panel-head"><h3 id="noteFormTitle">إضافة ملاحظة جديدة</h3><span>تُحفظ على هذا الجهاز</span></div>
+  <form id="noteForm"><input type="hidden" id="noteId"><div class="form-grid">
+   <div class="field"><label for="noteTitle">عنوان الملاحظة</label><input id="noteTitle" required placeholder="مثال: ملخص درس الرياضيات"></div>
+   <div class="field"><label for="noteSubject">المادة</label><select id="noteSubject"></select></div>
+   <div class="field full"><label for="noteContent">المحتوى</label><textarea id="noteContent" required placeholder="اكتب ملاحظاتك هنا..."></textarea></div>
+  </div><div class="form-actions"><button class="primary" type="submit">حفظ الملاحظة</button><button class="secondary hidden" type="button" id="cancelNote">إلغاء التعديل</button></div></form>
+ </div>
+ <div class="toolbar"><div class="filter-row"><select id="noteFilter"></select></div><input class="search" id="noteSearch" style="max-width:260px" placeholder="ابحث في الملاحظات..."></div>
+ <div class="notes-grid" id="notesList"></div>
+</section>
+
+<section class="page" id="tasks">
+ <div class="page-intro"><h3>📋 الفروض والاختبارات</h3><p>سجّل المواعيد والمواد، وتابع ما أنجزته وما يحتاج إلى تحضير.</p></div>
+ <div class="panel"><div class="panel-head"><h3 id="taskFormTitle">إضافة فرض أو اختبار</h3><span>نظّم مواعيدك</span></div>
+  <form id="taskForm"><input type="hidden" id="taskId"><div class="form-grid">
+   <div class="field"><label for="taskTitle">العنوان</label><input id="taskTitle" required placeholder="مثال: فرض الفصل الأول"></div>
+   <div class="field"><label for="taskSubject">المادة</label><select id="taskSubject"></select></div>
+   <div class="field"><label for="taskType">النوع</label><select id="taskType"><option>فرض</option><option>اختبار</option><option>واجب منزلي</option><option>مشروع</option></select></div>
+   <div class="field"><label for="taskDate">التاريخ</label><input id="taskDate" type="date" required></div>
+   <div class="field full"><label for="taskDetails">تفاصيل التحضير (اختياري)</label><textarea id="taskDetails" placeholder="الدروس المطلوبة أو ملاحظات للتحضير..."></textarea></div>
+  </div><div class="form-actions"><button class="primary" type="submit">حفظ الموعد</button><button class="secondary hidden" type="button" id="cancelTask">إلغاء التعديل</button></div></form>
+ </div>
+ <div class="toolbar"><div class="filter-row"><select id="taskStatusFilter"><option value="all">كل المواعيد</option><option value="pending">غير مكتملة</option><option value="done">مكتملة</option></select><select id="taskSubjectFilter"></select></div><input class="search" id="taskSearch" style="max-width:260px" placeholder="ابحث عن فرض..."></div>
+ <div class="panel"><div class="item-list" id="tasksList"></div></div>
+</section>
+
+<section class="page" id="revision">
+ <div class="page-intro"><h3>📚 المراجعات</h3><p>أنشئ خطة مراجعة لكل مادة، وحدّد تاريخها والدرس الذي تريد مراجعته.</p></div>
+ <div class="panel"><div class="panel-head"><h3 id="revFormTitle">إضافة حصة مراجعة</h3><span>خطّط بذكاء</span></div>
+  <form id="revForm"><input type="hidden" id="revId"><div class="form-grid">
+   <div class="field"><label for="revTitle">عنوان المراجعة</label><input id="revTitle" required placeholder="مثال: مراجعة الدوال"></div>
+   <div class="field"><label for="revSubject">المادة</label><select id="revSubject"></select></div>
+   <div class="field"><label for="revDate">التاريخ</label><input id="revDate" type="date" required></div>
+   <div class="field"><label for="revDuration">المدة</label><select id="revDuration"><option>30 دقيقة</option><option selected>45 دقيقة</option><option>ساعة</option><option>ساعة ونصف</option><option>ساعتان</option></select></div>
+   <div class="field full"><label for="revDetails">ماذا ستراجع؟</label><textarea id="revDetails" placeholder="الدروس، التمارين أو الأسئلة التي ستعمل عليها..."></textarea></div>
+  </div><div class="form-actions"><button class="primary" type="submit">حفظ المراجعة</button><button class="secondary hidden" type="button" id="cancelRev">إلغاء التعديل</button></div></form>
+ </div>
+ <div class="toolbar"><div class="filter-row"><select id="revStatusFilter"><option value="all">كل المراجعات</option><option value="pending">غير مكتملة</option><option value="done">مكتملة</option></select><select id="revSubjectFilter"></select></div><input class="search" id="revSearch" style="max-width:260px" placeholder="ابحث عن مراجعة..."></div>
+ <div class="panel"><div class="item-list" id="revisionList"></div></div>
+</section>
+
+<section class="page" id="schedule">
+ <div class="page-intro"><h3>🗓️ جدول التوقيت</h3><p>اضغط داخل أي خانة واكتب اسم المادة أو النشاط. يُحفظ الجدول تلقائيًا على جهازك.</p></div>
+ <div class="panel"><div class="panel-head"><h3>جدولي الأسبوعي</h3><button class="secondary" id="clearSchedule">مسح الجدول</button></div>
+  <div class="table-wrap"><table class="timetable" id="timetable"></table></div>
+  <p class="hint">هذا جدول فارغ قابل للتعديل، وليس توقيتًا رسميًا لمؤسستك. أدخل حصصك الفعلية ثم اترك الصفحة تحفظ التغييرات تلقائيًا.</p>
+ </div>
+</section>
+<div class="footer">دفتر الدراسة • نظّم وقتك، وتقدّم خطوة بخطوة ✦</div>
+</main>
+</div>
+<div class="toast" id="toast"></div>
+<script>
+const subjects=['الرياضيات','العلوم الفيزيائية','علوم الطبيعة والحياة','اللغة العربية','اللغة الفرنسية','اللغة الإنجليزية','التاريخ والجغرافيا','العلوم الإسلامية','الفلسفة','الإعلام الآلي','التربية البدنية','أخرى'];
+const days=['الأحد','الإثنين','الثلاثاء','الأربعاء','الخميس','الجمعة','السبت'];
+const periods=['08:00 - 09:00','09:00 - 10:00','10:00 - 11:00','11:00 - 12:00','13:30 - 14:30','14:30 - 15:30','15:30 - 16:30'];
+const $=id=>document.getElementById(id);
+const read=(key,fallback)=>{try{return JSON.parse(localStorage.getItem('study_'+key))??fallback}catch(e){return fallback}};
+const save=(key,value)=>localStorage.setItem('study_'+key,JSON.stringify(value));
+let notes=read('notes',[]),tasks=read('tasks',[]),revisions=read('revisions',[]),schedule=read('schedule',{});
+function escapeHTML(s=''){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function fillSelect(id,allLabel=null){const el=$(id);el.innerHTML=(allLabel?`<option value="all">${allLabel}</option>`:'')+subjects.map(s=>`<option value="${escapeHTML(s)}">${escapeHTML(s)}</option>`).join('')}
+['noteSubject','taskSubject','revSubject'].forEach(id=>fillSelect(id));
+[['noteFilter','كل المواد'],['taskSubjectFilter','كل المواد'],['revSubjectFilter','كل المواد'],].forEach(([id,label])=>fillSelect(id,label));
+const now=new Date();$('today').textContent=now.toLocaleDateString('ar-DZ',{weekday:'long',day:'numeric',month:'long'});
+const pageInfo={home:['مرحبًا بك 👋','كل ما تحتاجه لدراستك في مكان واحد.'],notes:['الملاحظات','اجمع ملخصاتك وأفكارك في مكان واحد.'],tasks:['الفروض والاختبارات','تابع مواعيدك واستعد لها دون ارتباك.'],revision:['المراجعات','خطّط لمراجعتك وتابع تقدّمك.'],schedule:['جدول التوقيت','نظّم حصصك الأسبوعية حسب توقيت مؤسستك.']};
+function go(page){document.querySelectorAll('.page').forEach(p=>p.classList.toggle('active',p.id===page));document.querySelectorAll('#navigation button').forEach(b=>b.classList.toggle('active',b.dataset.page===page));$('pageTitle').textContent=pageInfo[page][0];$('pageSubtitle').textContent=pageInfo[page][1];window.scrollTo({top:0,behavior:'smooth'})}
+document.querySelectorAll('#navigation button').forEach(b=>b.onclick=()=>go(b.dataset.page));
+document.querySelectorAll('[data-go]').forEach(b=>b.onclick=()=>go(b.dataset.go));
+let toastTimer;function toast(msg){$('toast').textContent=msg;$('toast').classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('toast').classList.remove('show'),2200)}
+function dateText(date){if(!date)return 'دون تاريخ';return new Date(date+'T12:00:00').toLocaleDateString('ar-DZ',{day:'numeric',month:'short',year:'numeric'})}
+function sortDate(a,b){return (a.date||'9999').localeCompare(b.date||'9999')}
+function empty(msg,icon='📭'){return `<div class="empty"><span>${icon}</span>${msg}</div>`}
+function itemHTML(item,type){const done=item.done;let subtitle=type==='task'?`${item.type} • ${item.subject} • ${dateText(item.date)}`:`${item.subject} • ${dateText(item.date)} • ${item.duration}`;return `<div class="item"><div><h4>${escapeHTML(item.title)}</h4><p>${escapeHTML(subtitle)}</p>${item.details?`<p style="margin-top:7px">${escapeHTML(item.details)}</p>`:''}<div style="display:flex;gap:7px;flex-wrap:wrap;margin-top:9px"><span class="pill ${done?'done':(item.date && item.date < new Date().toISOString().slice(0,10)?'soon':'')}">${done?'مكتمل':(item.date && item.date < new Date().toISOString().slice(0,10)?'تجاوز الموعد':'قيد الإنجاز')}</span><button class="secondary" onclick="toggleDone('${type}','${item.id}')">${done?'إلغاء الإنجاز':'تم الإنجاز ✓'}</button><button class="secondary" onclick="editItem('${type}','${item.id}')">تعديل</button></div></div><button class="delete" onclick="removeItem('${type}','${item.id}')">حذف</button></div>`}
+function renderNotes(){let list=notes.filter(n=>( $('noteFilter').value==='all'||n.subject===$('noteFilter').value)&&(`${n.title} ${n.content} ${n.subject}`).toLowerCase().includes($('noteSearch').value.toLowerCase()));$('notesList').innerHTML=list.length?list.map(n=>`<article class="note-card"><h4>${escapeHTML(n.title)}</h4><div class="note-meta">${escapeHTML(n.subject)} • ${escapeHTML(n.created||'')}</div><p>${escapeHTML(n.content)}</p><button class="secondary" onclick="editItem('note','${n.id}')">تعديل</button> <button class="delete" onclick="removeItem('note','${n.id}')">حذف</button></article>`).join(''):empty('لا توجد ملاحظات هنا بعد. أضف أول ملاحظة لك!','📝')}
+function renderTasks(){let list=tasks.filter(t=>($('taskStatusFilter').value==='all'||($('taskStatusFilter').value==='done')===!!t.done)&&($('taskSubjectFilter').value==='all'||t.subject===$('taskSubjectFilter').value)&&(`${t.title} ${t.subject} ${t.type}`).toLowerCase().includes($('taskSearch').value.toLowerCase())).sort(sortDate);$('tasksList').innerHTML=list.length?list.map(t=>itemHTML(t,'task')).join(''):empty('لا توجد فروض أو اختبارات مطابقة.','📋')}
+function renderRevisions(){let list=revisions.filter(t=>($('revStatusFilter').value==='all'||($('revStatusFilter').value==='done')===!!t.done)&&($('revSubjectFilter').value==='all'||t.subject===$('revSubjectFilter').value)&&(`${t.title} ${t.subject}`).toLowerCase().includes($('revSearch').value.toLowerCase())).sort(sortDate);$('revisionList').innerHTML=list.length?list.map(t=>itemHTML(t,'revision')).join(''):empty('لا توجد مراجعات مسجلة بعد.','📚')}
+function renderHome(){const upcoming=(arr)=>arr.filter(x=>!x.done).sort(sortDate).slice(0,3);$('upcomingTasks').innerHTML=upcoming(tasks).length?upcoming(tasks).map(t=>itemHTML(t,'task')).join(''):empty('لا توجد مواعيد قادمة.','🌟');$('upcomingRevision').innerHTML=upcoming(revisions).length?upcoming(revisions).map(t=>itemHTML(t,'revision')).join(''):empty('أضف حصة مراجعة لتبدأ.','📖');$('countNotes').textContent=notes.length;$('countTasks').textContent=tasks.length;$('countRevision').textContent=revisions.length;$('countDone').textContent=tasks.filter(t=>t.done).length+revisions.filter(t=>t.done).length}
+function renderAll(){renderNotes();renderTasks();renderRevisions();renderHome()}
+function resetForm(type){const map={note:['noteForm','noteId','noteFormTitle','إضافة ملاحظة جديدة','cancelNote'],task:['taskForm','taskId','taskFormTitle','إضافة فرض أو اختبار','cancelTask'],revision:['revForm','revId','revFormTitle','إضافة حصة مراجعة','cancelRev']};let [form,id,title,label,cancel]=map[type];$(form).reset();$(id).value='';$(title).textContent=label;$(cancel).classList.add('hidden')}
+function editItem(type,id){let item,formType;if(type==='note'){item=notes.find(x=>x.id===id);formType='note';if(!item)return; $('noteId').value=id;$('noteTitle').value=item.title;$('noteSubject').value=item.subject;$('noteContent').value=item.content;$('noteFormTitle').textContent='تعديل الملاحظة';$('cancelNote').classList.remove('hidden');go('notes');}
+else{const arr=type==='task'?tasks:revisions;item=arr.find(x=>x.id===id);if(!item)return;formType=type==='task'?'task':'revision';if(type==='task'){$('taskId').value=id;$('taskTitle').value=item.title;$('taskSubject').value=item.subject;$('taskType').value=item.type;$('taskDate').value=item.date;$('taskDetails').value=item.details||'';$('taskFormTitle').textContent='تعديل الموعد';$('cancelTask').classList.remove('hidden');go('tasks')}else{$('revId').value=id;$('revTitle').value=item.title;$('revSubject').value=item.subject;$('revDate').value=item.date;$('revDuration').value=item.duration;$('revDetails').value=item.details||'';$('revFormTitle').textContent='تعديل المراجعة';$('cancelRev').classList.remove('hidden');go('revision')}}}
+function removeItem(type,id){if(!confirm('هل تريد حذف هذا العنصر؟'))return;if(type==='note'){notes=notes.filter(x=>x.id!==id);save('notes',notes)}else if(type==='task'){tasks=tasks.filter(x=>x.id!==id);save('tasks',tasks)}else{revisions=revisions.filter(x=>x.id!==id);save('revisions',revisions)}renderAll();toast('تم الحذف')}
+function toggleDone(type,id){let arr=type==='task'?tasks:revisions;let item=arr.find(x=>x.id===id);if(item){item.done=!item.done;save(type==='task'?'tasks':'revisions',arr);renderAll();toast(item.done?'أحسنت! تم تسجيل الإنجاز':'تم تحديث الحالة')}}
+function newId(){return Date.now().toString(36)+Math.random().toString(36).slice(2,7)}
+$('noteForm').onsubmit=e=>{e.preventDefault();let id=$('noteId').value;let old=notes.find(n=>n.id===id);let obj={id:id||newId(),title:$('noteTitle').value.trim(),subject:$('noteSubject').value,content:$('noteContent').value.trim(),created:old?.created||new Date().toLocaleDateString('ar-DZ')};if(old)notes=notes.map(n=>n.id===id?obj:n);else notes.unshift(obj);save('notes',notes);resetForm('note');renderAll();toast(old?'تم تعديل الملاحظة':'تم حفظ الملاحظة')};
+$('taskForm').onsubmit=e=>{e.preventDefault();let id=$('taskId').value,old=tasks.find(t=>t.id===id);let obj={id:id||newId(),title:$('taskTitle').value.trim(),subject:$('taskSubject').value,type:$('taskType').value,date:$('taskDate').value,details:$('taskDetails').value.trim(),done:old?.done||false};if(old)tasks=tasks.map(t=>t.id===id?obj:t);else tasks.push(obj);save('tasks',tasks);resetForm('task');renderAll();toast(old?'تم تعديل الموعد':'تم حفظ الموعد')};
+$('revForm').onsubmit=e=>{e.preventDefault();let id=$('revId').value,old=revisions.find(t=>t.id===id);let obj={id:id||newId(),title:$('revTitle').value.trim(),subject:$('revSubject').value,date:$('revDate').value,duration:$('revDuration').value,details:$('revDetails').value.trim(),done:old?.done||false};if(old)revisions=revisions.map(t=>t.id===id?obj:t);else revisions.push(obj);save('revisions',revisions);resetForm('revision');renderAll();toast(old?'تم تعديل المراجعة':'تم حفظ المراجعة')};
+[['cancelNote','note'],['cancelTask','task'],['cancelRev','revision']].forEach(([id,type])=>$(id).onclick=()=>resetForm(type));
+['noteFilter','noteSearch'].forEach(id=>$(id).addEventListener('input',renderNotes));
+['taskStatusFilter','taskSubjectFilter','taskSearch'].forEach(id=>$(id).addEventListener('input',renderTasks));
+['revStatusFilter','revSubjectFilter','revSearch'].forEach(id=>$(id).addEventListener('input',renderRevisions));
+function buildSchedule(){let html='<thead><tr><th>التوقيت</th>'+days.map(d=>`<th>${d}</th>`).join('')+'</tr></thead><tbody>';periods.forEach((p,ri)=>{html+='<tr><td class="time">'+p+'</td>';days.forEach((d,di)=>{let key=`${ri}_${di}`;html+=`<td><input aria-label="${d} ${p}" data-cell="${key}" value="${escapeHTML(schedule[key]||'')}" placeholder="—"></td>`});html+='</tr>'});$('timetable').innerHTML=html;$('timetable').querySelectorAll('input').forEach(inp=>inp.addEventListener('input',()=>{schedule[inp.dataset.cell]=inp.value;save('schedule',schedule)}))}
+$('clearSchedule').onclick=()=>{if(confirm('هل تريد مسح جميع حصص الجدول؟')){schedule={};save('schedule',schedule);buildSchedule();toast('تم مسح الجدول')}};
+buildSchedule();renderAll();
+</script>
+</body>
+</html>
